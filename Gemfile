@@ -37,11 +37,12 @@ gem 'jbuilder', '~> 2.5'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
-
+# gem 'debugger', group: [:development, :test]
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'sqlite3', '1.3.13'
-  gem 'byebug',  '9.0.6', platform: :mri
+  gem 'byebug', platform: [:mri, :mingw, :x64_mingw]
+  # gem 'debugger'
 end
 
 group :development do
