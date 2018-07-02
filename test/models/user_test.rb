@@ -5,6 +5,10 @@ class UserTest < ActiveSupport::TestCase
     @user = User.new(name: "Example User", email: "user@example.com",
                      password: "foobar", password_confirmation: "foobar")
   end
+<<<<<<< HEAD
+=======
+
+>>>>>>> advanced-login
   test "should be valid" do
     assert @user.valid?
   end
@@ -17,7 +21,10 @@ class UserTest < ActiveSupport::TestCase
     @user.email = "     "
     assert_not @user.valid?
   end
+<<<<<<< HEAD
 
+=======
+>>>>>>> advanced-login
   test "name should not be too long" do
     @user.name = "a" * 51
     assert_not @user.valid?
@@ -28,6 +35,7 @@ class UserTest < ActiveSupport::TestCase
     assert_not @user.valid?
   end
 
+<<<<<<< HEAD
   test "email validation should accept valid addresses" do
     valid_addresses = %w[user@example.com USER@foo.COM A_US-ER@foo.bar.org
                          first.last@foo.jp alice+bob@baz.cn]
@@ -48,6 +56,8 @@ class UserTest < ActiveSupport::TestCase
 
 
 
+=======
+>>>>>>> advanced-login
   test "email addresses should be unique" do
     duplicate_user = @user.dup
     duplicate_user.email = @user.email.upcase
@@ -57,11 +67,16 @@ class UserTest < ActiveSupport::TestCase
 
   test "email addresses should be saved as lower-case" do
     mixed_case_email = "Foo@ExAMPle.CoM"
+<<<<<<< HEAD
    
     @user.email = mixed_case_email
     
     @user.save
 
+=======
+    @user.email = mixed_case_email
+    @user.save
+>>>>>>> advanced-login
     assert_equal mixed_case_email.downcase, @user.reload.email
   end
 
@@ -74,4 +89,10 @@ class UserTest < ActiveSupport::TestCase
     @user.password = @user.password_confirmation = "a" * 5
     assert_not @user.valid?
   end
+<<<<<<< HEAD
+=======
+  test "authenticated? should return false for a user with nil digest" do
+    assert_not @user.authenticated?('')
+  end
+>>>>>>> advanced-login
 end
