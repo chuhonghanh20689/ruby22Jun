@@ -15,11 +15,7 @@ gem 'bootstrap-will_paginate', '1.0.0'
 # gem 'sqlite3'
 # Use Puma as the app server
 
-gem 'jquery-rails'
-gem 'jquery-ui-rails'
-# gem 'jquery-turbolinks'
-
-
+gem 'jquery-rails', '4.3.1'
 gem 'puma', '~> 3.11'
 
 gem 'bootstrap-sass', '3.3.7'
@@ -32,10 +28,10 @@ gem 'duktape'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
-#gem 'turbolinks', '~> 5'
+gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
-
+gem 'jquery-turbolinks'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
